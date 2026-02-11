@@ -43,7 +43,7 @@ jobs:
 
       - name: Pack NuGet
         working-directory: sdk/csharp/Pulumi.Esc.Sdk
-        run: dotnet pack -c Release -o nupkg /p:Version=${{ inputs.version }}
+        run: dotnet pack -c Release -o nupkg /p:Version=${{ inputs.version }} /p:RepositoryUrl=https://github.com/jetlinx/jetlinx-dev-packages
 
       - name: Push to JetLinx GitHub Packages
         run: |
